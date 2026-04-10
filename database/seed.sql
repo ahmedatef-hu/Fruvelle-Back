@@ -10,27 +10,6 @@ ON CONFLICT DO NOTHING;
 
 -- Insert sample products
 INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock, is_featured, images) VALUES
-  -- فواكه مجففة
-  (
-    'تمر المدينة الفاخر',
-    'تمر المدينة المنورة الفاخر، طري ولذيذ، غني بالفيتامينات والمعادن',
-    45.00,
-    (SELECT id FROM categories WHERE name_ar = 'فواكه مجففة' LIMIT 1),
-    '500 جرام',
-    200,
-    true,
-    ARRAY['https://images.pexels.com/photos/4022092/pexels-photo-4022092.jpeg?auto=compress&cs=tinysrgb&w=800']
-  ),
-  (
-    'تمر عجوة المدينة',
-    'تمر عجوة المدينة الأصلي، معروف بفوائده الصحية العديدة',
-    65.00,
-    (SELECT id FROM categories WHERE name_ar = 'فواكه مجففة' LIMIT 1),
-    '500 جرام',
-    150,
-    true,
-    ARRAY['https://images.pexels.com/photos/4022091/pexels-photo-4022091.jpeg?auto=compress&cs=tinysrgb&w=800']
-  ),
   (
     'مشمش مجفف',
     'مشمش مجفف طبيعي بدون سكر مضاف، غني بالفيتامينات',
@@ -39,7 +18,7 @@ INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock
     '250 جرام',
     200,
     true,
-    ARRAY['https://images.pexels.com/photos/8969237/pexels-photo-8969237.jpeg?auto=compress&cs=tinysrgb&w=800']
+    ARRAY['https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=800&q=80']
   ),
   (
     'تين مجفف',
@@ -49,17 +28,7 @@ INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock
     '250 جرام',
     180,
     false,
-    ARRAY['https://images.pexels.com/photos/5966630/pexels-photo-5966630.jpeg?auto=compress&cs=tinysrgb&w=800']
-  ),
-  (
-    'زبيب ذهبي',
-    'زبيب ذهبي طبيعي، مصدر ممتاز للطاقة',
-    22.00,
-    (SELECT id FROM categories WHERE name_ar = 'فواكه مجففة' LIMIT 1),
-    '250 جرام',
-    250,
-    false,
-    ARRAY['https://images.pexels.com/photos/4022090/pexels-photo-4022090.jpeg?auto=compress&cs=tinysrgb&w=800']
+    ARRAY['https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=800&q=80']
   ),
   (
     'قراصيا مجففة',
@@ -69,10 +38,8 @@ INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock
     '250 جرام',
     160,
     false,
-    ARRAY['https://images.pexels.com/photos/8969239/pexels-photo-8969239.jpeg?auto=compress&cs=tinysrgb&w=800']
+    ARRAY['https://images.unsplash.com/photo-1577234286642-fc512a5f8f11?w=800&q=80']
   ),
-  
-  -- كاندي مجفف
   (
     'كاندي فواكه استوائية',
     'كاندي فواكه استوائية مجففة بنكهات متنوعة ولذيذة',
@@ -81,7 +48,7 @@ INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock
     '200 جرام',
     150,
     true,
-    ARRAY['https://images.pexels.com/photos/3723575/pexels-photo-3723575.jpeg?auto=compress&cs=tinysrgb&w=800']
+    ARRAY['https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=800&q=80']
   ),
   (
     'كاندي جيلي ملون',
@@ -91,7 +58,7 @@ INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock
     '200 جرام',
     120,
     false,
-    ARRAY['https://images.pexels.com/photos/3723574/pexels-photo-3723574.jpeg?auto=compress&cs=tinysrgb&w=800']
+    ARRAY['https://images.unsplash.com/photo-1499195333224-3ce974eecb47?w=800&q=80']
   ),
   (
     'كاندي مانجو مجفف',
@@ -101,10 +68,8 @@ INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock
     '200 جرام',
     100,
     false,
-    ARRAY['https://images.pexels.com/photos/5966631/pexels-photo-5966631.jpeg?auto=compress&cs=tinysrgb&w=800']
+    ARRAY['https://images.unsplash.com/photo-1605027990121-cbae9e0642df?w=800&q=80']
   ),
-  
-  -- مارشميلو
   (
     'مارشميلو ملون كبير',
     'مارشميلو طري وملون بألوان جذابة، حجم كبير',
@@ -113,7 +78,7 @@ INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock
     '150 جرام',
     180,
     true,
-    ARRAY['https://images.pexels.com/photos/4022092/pexels-photo-4022092.jpeg?auto=compress&cs=tinysrgb&w=800']
+    ARRAY['https://images.unsplash.com/photo-1571506165871-ee72a35bc9d4?w=800&q=80']
   ),
   (
     'مارشميلو فانيليا',
@@ -123,7 +88,7 @@ INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock
     '150 جرام',
     200,
     false,
-    ARRAY['https://images.pexels.com/photos/4022091/pexels-photo-4022091.jpeg?auto=compress&cs=tinysrgb&w=800']
+    ARRAY['https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=800&q=80']
   ),
   (
     'مارشميلو بالفراولة',
@@ -133,10 +98,8 @@ INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock
     '150 جرام',
     160,
     false,
-    ARRAY['https://images.pexels.com/photos/3723575/pexels-photo-3723575.jpeg?auto=compress&cs=tinysrgb&w=800']
+    ARRAY['https://images.unsplash.com/photo-1548848979-47519fe73dca?w=800&q=80']
   ),
-  
-  -- سناكس مجففة
   (
     'شيبس تفاح مجفف',
     'شيبس تفاح مجفف مقرمش وصحي، بدون سكر مضاف',
@@ -145,7 +108,7 @@ INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock
     '100 جرام',
     140,
     true,
-    ARRAY['https://images.pexels.com/photos/5966631/pexels-photo-5966631.jpeg?auto=compress&cs=tinysrgb&w=800']
+    ARRAY['https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=800&q=80']
   ),
   (
     'شيبس موز مجفف',
@@ -155,7 +118,7 @@ INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock
     '100 جرام',
     130,
     false,
-    ARRAY['https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&w=800']
+    ARRAY['https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=800&q=80']
   ),
   (
     'مكس فواكه مجففة',
@@ -165,7 +128,7 @@ INSERT INTO products (name_ar, description_ar, price, category_id, weight, stock
     '150 جرام',
     110,
     false,
-    ARRAY['https://images.pexels.com/photos/8969237/pexels-photo-8969237.jpeg?auto=compress&cs=tinysrgb&w=800']
+    ARRAY['https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=800&q=80']
   );
 
 -- Insert sample customer users
