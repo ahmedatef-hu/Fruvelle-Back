@@ -33,6 +33,22 @@ app.use('/api/users', userRoutes);
 app.use('/api/categories', categoryRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({ 
+    success: true,
+    message: 'Fruvelle API Server',
+    version: '1.0.0',
+    endpoints: {
+      health: '/api/health',
+      products: '/api/products',
+      categories: '/api/categories',
+      orders: '/api/orders',
+      auth: '/api/auth'
+    }
+  });
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Fruvelle API is running' });
